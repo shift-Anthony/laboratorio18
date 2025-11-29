@@ -25,4 +25,14 @@ btnEj11.addEventListener('click', () => {
     else resultadoEj11.textContent = "No hay URLs seguras (https).";
 
 });
-//Ejercici 12
+//Ejercicio 12
+const btnEj12 = document.getElementById('btn-ej12');
+const inputEj12 = document.getElementById('input-ej12');
+const resultadoEj12 = document.getElementById('resultado-ej12');
+
+const regexHtml = /<[^>]+>/g;
+
+btnEj12.addEventListener('click', () => {
+    const textoLimpio = inputEj12.value.replace(regexHtml, "");
+    resultadoEj12.textContent = "Texto limpio: " + textoLimpio;
+});
