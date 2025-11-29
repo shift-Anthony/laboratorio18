@@ -50,3 +50,20 @@ btnEj13.addEventListener('click', () => {
     resultadoEj13.textContent = JSON.stringify(oraciones, null, 2);
 
 });
+
+//Ejercicio 14
+const btnEj14 = document.getElementById('btn-ej14');
+const inputEj14 = document.getElementById('input-ej14');
+const resultadoEj14 = document.getElementById('resultado-ej14');
+
+
+const regexFecha = /^\d{2}\/\d{2}\/\d{4}$/;
+
+btnEj14.addEventListener('click', () => {
+
+    if (regexFecha.test(inputEj14.value)) {
+        resultadoEj14.textContent = "Fecha válida";
+    } else {
+        resultadoEj14.textContent = "Formato incorrecto";
+    }
+});
