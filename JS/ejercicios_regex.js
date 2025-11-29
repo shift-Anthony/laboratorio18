@@ -36,3 +36,17 @@ btnEj12.addEventListener('click', () => {
     const textoLimpio = inputEj12.value.replace(regexHtml, "");
     resultadoEj12.textContent = "Texto limpio: " + textoLimpio;
 });
+//Ejercicio 13
+const btnEj13 = document.getElementById('btn-ej13');
+const inputEj13 = document.getElementById('input-ej13');
+const resultadoEj13 = document.getElementById('resultado-ej13');
+
+const regexDivision = /[.?!]+\s*/;
+
+btnEj13.addEventListener('click', () => {
+
+    const oraciones = inputEj13.value.split(regexDivision).filter(oracion => oracion.length > 0);
+
+    resultadoEj13.textContent = JSON.stringify(oraciones, null, 2);
+
+});
